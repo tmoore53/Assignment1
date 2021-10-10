@@ -4,8 +4,8 @@
 // Can add/remove books from library
 // findbooks in library
 
-#include "library.h"
 #include <iostream>
+#include "library.h"
 
 // constructor with default name
 Library::Library(const string &Name) : LibraryName{Name}, NumberOfBooks{0}
@@ -24,7 +24,7 @@ bool Library::isInLibrary(const string &BookName) const
 {
     for (string book : LibraryInv)
     {
-        if (book._Equal(BookName))
+        if (book == BookName)
             return true;
     }
     return false;
@@ -58,7 +58,7 @@ bool Library::removeBook(const string &BookName)
 
     for (int i{0}; i < NumberOfBooks; i++)
     {
-        if (BookName._Equal(LibraryInv[i]))
+        if (BookName == LibraryInv[i])
         {
             for (int j = i + 1; j < NumberOfBooks; j++)
             {

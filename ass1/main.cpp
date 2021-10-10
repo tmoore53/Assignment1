@@ -1,7 +1,6 @@
-#include <IOstream>
+//Why does this get red lines?
+#include <iostream>
 #include <cassert>
-//#include "addressExercise.cpp"
-#include "book.h"
 #include "library.h"
 
 using namespace std;
